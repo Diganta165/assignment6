@@ -40,7 +40,6 @@ const getImages = (query) => {
 
 let slideIndex = 0;
 const selectItem = (event, img) => {
-
   let element = event.target;
   element.classList.toggle('added');
   let item = sliders.indexOf(img);
@@ -81,6 +80,7 @@ const createSlider = () => {
   }
   
 }
+
 const sliderTiming =(duration) =>{
   sliders.forEach(slide => {
     let item = document.createElement('div')
@@ -132,7 +132,7 @@ searchBtn.addEventListener('click', function () {
 })
 
 sliderBtn.addEventListener('click', function () {
-  createSlider()
+  createSlider();
 })
 //enter key to search
 document.getElementById("search").addEventListener("keypress",function(event){
